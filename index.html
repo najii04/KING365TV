@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PRO MAX SAT — Applications & Services</title>
+  <meta name="description" content="PRO MAX SAT — applications, abonnements et téléchargements.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="brand-mark">PRO</span><span>MAX SAT</span></a>
+    <nav>
+      <a href="#apps">Applications</a>
+      <a href="#services">Services</a>
+      <a href="#payment">Paiement</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">PRO MAX SAT</span>
+      <h1>Vos applications et services, au même endroit.</h1>
+      <p>Téléchargez les applications disponibles, consultez les offres et contactez-nous directement.</p>
+      <div class="actions">
+        <a class="btn primary" href="#apps">Voir les applications</a>
+        <a class="btn secondary" href="#contact">Nous contacter</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="glow"></div>
+      <div class="logo-big">PRO<br><span>MAX SAT</span></div>
+      <p>Applications • Services • Support</p>
+    </div>
+  </div>
+</section>
+
+<section id="apps" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow">DOWNLOAD</span><h2>Applications</h2></div>
+      <input id="search" class="search" type="search" placeholder="Rechercher une application…">
+    </div>
+    <div id="app-grid" class="grid">
+      <article class="card app-card" data-name="KING365TV V4">
+        <div class="icon king">K365</div>
+        <div class="card-body">
+          <span class="tag">Android TV</span>
+          <h3>KING365TV V4</h3>
+          <p>Version 3.0.7</p>
+          <a class="btn primary small" href="https://github.com/najii04/KING365TV/releases/latest/download/KING365TV.V4.3.0.7.apk">Télécharger APK</a>
+        </div>
+      </article>
+
+      <article class="card app-card" data-name="Votre application">
+        <div class="icon">APP</div>
+        <div class="card-body">
+          <span class="tag">Bientôt</span>
+          <h3>Nouvelle application</h3>
+          <p>Ajoutez ici votre prochaine application.</p>
+          <button class="btn disabled small" disabled>Disponible bientôt</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section alt">
+  <div class="wrap">
+    <span class="eyebrow">SERVICES</span>
+    <h2>Nos services</h2>
+    <div class="feature-grid">
+      <div class="feature"><b>📺 Applications</b><span>Applications compatibles avec les appareils pris en charge.</span></div>
+      <div class="feature"><b>⚡ Activation</b><span>Activation et assistance selon le service choisi.</span></div>
+      <div class="feature"><b>🛠 Support</b><span>Aide à l'installation et à la configuration.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="payment" class="section">
+  <div class="wrap">
+    <span class="eyebrow">PAIEMENT</span>
+    <h2>Modes de paiement</h2>
+    <div class="payments">
+      <span>CCP / BaridiMob</span><span>Wise</span><span>Paysera</span><span>Binance</span>
+      <span>RedotPay</span><span>PayPal</span><span>SEPA</span><span>Bank Transfer</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="wrap contact-box">
+    <div><span class="eyebrow">CONTACT</span><h2>Besoin d'aide ?</h2><p>Contactez PRO MAX SAT pour les informations, commandes et assistance.</p></div>
+    <a class="btn primary" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="year"></span> PRO MAX SAT. Tous droits réservés.</div></footer>
+
+<script>
+const search = document.getElementById('search');
+search.addEventListener('input', () => {
+  const q = search.value.toLowerCase().trim();
+  document.querySelectorAll('.app-card').forEach(card => {
+    card.style.display = card.dataset.name.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
